@@ -7,7 +7,6 @@ using namespace std;
 string keywds [51] = {"abstract", "boolean", "break", "byte","case", "catch", "char", "class", "continue", "default", "do","double", "else", "extends", "final", "finally", "float", "for","if", "implements", "import", "instanceof", "int", "interface", "long", "native", "new", "package", "private", "protected", "public", "return", "short", "static", "super", "switch","synchronized", "this", "throw","throws", "transient", "try","void","volatile","while","strictfp","enum","goto","const","assert","import"};
 string sentence;
 string blwds  [4] = {"true", "false", "TRUE", "FALSE"};
-using namespace std;
 
 int lines = 0;
 int cols = 0;
@@ -102,7 +101,7 @@ inline int analysis(char &input, char &input_next, FILE* file){
         if (check_bool(sentence)){
             out_put("bool", sentence);
         } else if (check_keywords(sentence)){
-            out_put("keyword", sentence);
+            out_put(sentence, sentence);
         } else {
             out_put("identifier", sentence);
         }

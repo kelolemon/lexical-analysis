@@ -169,10 +169,10 @@ inline int analysis(char &input, char &input_next, FILE* file){
         if (check_opt(input)){
             append(input);
             advance(input, input_next, 1, file);
-            out_put("binary option", sentence);
+            out_put("binary operator", sentence);
             return 1;
         }
-        out_put("option", sentence);
+        out_put("operator", sentence);
         return 1;
     }
     if (input == '\"'){

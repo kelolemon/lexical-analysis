@@ -170,10 +170,10 @@ int analysis(char *pinput, char *pinput_next, FILE* file){
         if (check_opt(*pinput)){
             append( *pinput);
             advance(pinput, pinput_next, 1, file);
-            out_put("binary option", sentence);
+            out_put("binary operator", sentence);
             return 1;
         }
-        out_put("option", sentence);
+        out_put("operator", sentence);
         return 1;
     }
     if (*pinput == '\"'){
